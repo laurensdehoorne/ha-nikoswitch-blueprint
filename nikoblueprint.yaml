@@ -1,0 +1,51 @@
+blueprint:
+  name: Friends of Hue 4 Button All functions (Corrected Long Press)
+  description: Automate your Friends of Hue 4 Button switch using Hue integration with short and long press. Be aware input.helper need to be created before automation works with corect long press
+  domain: automation
+  input:
+    helper-remember-longrelease:
+      name: Input.helper to remember longrelease
+      description: A toggled helper, created through "settings - devices - helpers - create helpers". The helper can have whatever name
+      selector:
+        entity:
+          domain: input_boolean
+
+    hue-4-button-switch:
+      name: Hue Frinds of 4-Button Switch
+      description: Hue Frinds of 4-Button Switch
+      selector:
+        device:
+          manufacturer: PhilipsFoH
+
+    button_1_short_release:
+      name: Short Release 1
+      description: Action to run on button upper-left short release
+      default: []
+      selector:
+        action: {}
+    button_2_short_release:
+      name: Short Release 2
+      description: Action to run on button lower-left short release
+      default: []
+      selector:
+        action: {}
+    button_3_short_release:
+      name: Short Release 3
+      description: Action to run on button upper-right short release
+      default: []
+      selector:
+        action: {}
+    button_4_short_release:
+      name: Short Release 4
+      description: Action to run on button lower-right short release
+      default: []
+      selector:
+        action: {}
+
+    button_1_long_release:
+      name: Long Release 1
+      description: Action to run on button upper-left long release
+      default: []
+      selector:
+        action: {}
+    button_2_long_release:
